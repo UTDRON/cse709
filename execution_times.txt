@@ -1,0 +1,16 @@
+editDistance.py: 0m0.038s
+palindrome.py: 0m0.015s
+permutationSequence.py: 0m0.014s
+roman2integer.py: 0m0.011s
+sortColors.py: 0m0.011s
+sudoku.py: 0m0.021s
+twoSum.py: 0m0.011s
+wordLadder.py: 0m0.012s
+editDistance.py: 0m0.012s
+palindrome.py: 0m0.011s
+permutationSequence.py: 0m0.011s
+roman2integer.py: 0m0.011s
+sortColors.py: 0m0.011s
+sudoku.py: 0m0.011s
+twoSum.py: 0m0.011s
+wordLadder.py: 0m0.012s
