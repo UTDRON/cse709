@@ -61,6 +61,21 @@ def roman_to_integer(s):
     return result
 
 # Example usage:
-print(roman_to_integer("III"))      # Output: 3
-print(roman_to_integer("LVIII"))    # Output: 58
-print(roman_to_integer("MCMXCIV"))  # Output: 1994
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    roman_to_integer("III")      # Output: 3
+    roman_to_integer("LVIII")    # Output: 58
+    roman_to_integer("MCMXCIV")  # Output: 1994
+    
+# print(roman_to_integer("III"))      # Output: 3
+# print(roman_to_integer("LVIII"))    # Output: 58
+# print(roman_to_integer("MCMXCIV"))  # Output: 1994

@@ -56,6 +56,21 @@ def getPermutation(n: int, k: int) -> str:
     return result
 
 # Example usage:
-print(getPermutation(3, 3))  # Output: "213"
-print(getPermutation(4, 9))  # Output: "2314"
-print(getPermutation(3, 1))  # Output: "123"
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 1000000
+
+for _ in range(num_simulations):
+    getPermutation(3, 3)  # Output: "213"
+    getPermutation(4, 9)  # Output: "2314"
+    getPermutation(3, 1)  # Output: "123"
+
+# print(getPermutation(3, 3))  # Output: "213"
+# print(getPermutation(4, 9))  # Output: "2314"
+# print(getPermutation(3, 1))  # Output: "123"

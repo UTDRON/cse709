@@ -57,11 +57,28 @@ def printTree(root):
 
 sol = Solution()
 # Test cases
-nums1 = [-10, -3, 0, 5, 9]
-root1 = sol.sortedArrayToBST(nums1)
-printTree(root1)
-print()
+import sys
 
-nums2 = [1, 3]
-root2 = sol.sortedArrayToBST(nums2)
-printTree(root2)
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    nums1 = [-10, -3, 0, 5, 9]
+    root1 = sol.sortedArrayToBST(nums1)
+
+    nums2 = [1, 3]
+    root2 = sol.sortedArrayToBST(nums2)
+    
+# nums1 = [-10, -3, 0, 5, 9]
+# root1 = sol.sortedArrayToBST(nums1)
+# printTree(root1)
+# print()
+
+# nums2 = [1, 3]
+# root2 = sol.sortedArrayToBST(nums2)
+# printTree(root2)

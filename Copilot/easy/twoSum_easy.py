@@ -40,13 +40,36 @@ class Solution:
         return []
 
 
-nums = [2, 7, 11, 15]
-target = 9
-print(Solution().twoSum(nums, target))
-nums = [3,2,4]
-target = 6
-print(Solution().twoSum(nums, target))
-nums = [3,3]
-target = 6
-print(Solution().twoSum(nums, target))
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    nums1 = [2, 7, 11, 15]
+    target1 = 9
+    Solution().twoSum(nums1, target1)
+
+    nums2 = [3, 2, 4]
+    target2 = 6
+    Solution().twoSum(nums2, target2)
+
+    nums3 = [3, 3]
+    target3 = 6
+    Solution().twoSum(nums3, target3)
+
+# nums = [2, 7, 11, 15]
+# target = 9
+# print(Solution().twoSum(nums, target))
+# nums = [3,2,4]
+# target = 6
+# print(Solution().twoSum(nums, target))
+# nums = [3,3]
+# target = 6
+# print(Solution().twoSum(nums, target))
 

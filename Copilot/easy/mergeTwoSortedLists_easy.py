@@ -51,21 +51,46 @@ class Solution:
         return dummy.next
 
 sol = Solution()
+import sys
 
-# Example1:
-list1 = ListNode([1, 2, 4])
-list2 = ListNode([1, 3, 4])
-merged_list = sol.mergeTwoLists(list1, list2)
-print(merged_list)
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
 
-# Example1:
-list1 = ListNode([])
-list2 = ListNode([])
-merged_list = sol.mergeTwoLists(list1, list2)
-print(merged_list)
+for _ in range(num_simulations):
+    # Example1:
+    list1 = ListNode([1, 2, 4])
+    list2 = ListNode([1, 3, 4])
+    merged_list = sol.mergeTwoLists(list1, list2)
 
-# Example1:
-list1 = ListNode([])
-list2 = ListNode([0])
-merged_list = sol.mergeTwoLists(list1, list2)
-print(merged_list)
+    # Example1:
+    list1 = ListNode([])
+    list2 = ListNode([])
+    merged_list = sol.mergeTwoLists(list1, list2)
+
+    # Example1:
+    list1 = ListNode([])
+    list2 = ListNode([0])
+    merged_list = sol.mergeTwoLists(list1, list2)
+
+# # Example1:
+# list1 = ListNode([1, 2, 4])
+# list2 = ListNode([1, 3, 4])
+# merged_list = sol.mergeTwoLists(list1, list2)
+# print(merged_list)
+
+# # Example1:
+# list1 = ListNode([])
+# list2 = ListNode([])
+# merged_list = sol.mergeTwoLists(list1, list2)
+# print(merged_list)
+
+# # Example1:
+# list1 = ListNode([])
+# list2 = ListNode([0])
+# merged_list = sol.mergeTwoLists(list1, list2)
+# print(merged_list)

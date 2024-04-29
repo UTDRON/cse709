@@ -53,14 +53,39 @@ def minDistance(word1, word2):
     return dp[m][n]
 
 # Example usage:
-word1 = "horse"
-word2 = "ros"
-print(minDistance(word1, word2))  # Output: 3
+import sys
 
-word1 = "intention"
-word2 = "execution"
-print(minDistance(word1, word2))  # Output: 5
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 100000
 
-word1 = "aquickbrownfoxjumpedoverthelazydogs"
-word2 = "catreegoatapaperedoguntheracheliam"
-print(minDistance(word1, word2))  
+
+for _ in range(num_simulations):
+    word1 = "horse"
+    word2 = "ros"
+    minDistance(word1, word2)
+
+    word1 = "intention"
+    word2 = "execution"
+    minDistance(word1, word2)
+
+    word1 = "aquickbrownfoxjumpedoverthelazydogs"
+    word2 = "catreegoatapaperedoguntheracheliam"
+    minDistance(word1, word2)
+
+
+# word1 = "horse"
+# word2 = "ros"
+# print(minDistance(word1, word2))  # Output: 3
+
+# word1 = "intention"
+# word2 = "execution"
+# print(minDistance(word1, word2))  # Output: 5
+
+# word1 = "aquickbrownfoxjumpedoverthelazydogs"
+# word2 = "catreegoatapaperedoguntheracheliam"
+# print(minDistance(word1, word2))  

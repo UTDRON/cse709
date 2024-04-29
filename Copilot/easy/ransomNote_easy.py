@@ -50,6 +50,21 @@ def canConstruct(ransomNote: str, magazine: str) -> bool:
         return True
 
 # Test cases
-print(canConstruct("a", "b"))    # Output: False
-print(canConstruct("aa", "ab"))   # Output: False
-print(canConstruct("aa", "aab"))  # Output: True
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    canConstruct("a", "b")    # Output: False
+    canConstruct("aa", "ab")   # Output: False
+    canConstruct("aa", "aab")  # Output: True
+
+# print(canConstruct("a", "b"))    # Output: False
+# print(canConstruct("aa", "ab"))   # Output: False
+# print(canConstruct("aa", "aab"))  # Output: True

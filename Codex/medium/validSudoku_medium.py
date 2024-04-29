@@ -104,8 +104,20 @@ board2 = [
     [".",".",".",".","8",".",".","7","9"]
 ]
 
-start = time.time()
-print(solution.isValidSudoku(board1))  # Output: True
-print(solution.isValidSudoku(board2))  # Output: False
-end = time.time()
-print(end-start)
+
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 1000000
+
+for _ in range(num_simulations):
+    solution.isValidSudoku(board1)
+    solution.isValidSudoku(board2)
+    
+# print(solution.isValidSudoku(board1))  # Output: True
+# print(solution.isValidSudoku(board2))  # Output: False

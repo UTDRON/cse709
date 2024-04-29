@@ -98,8 +98,20 @@ board2 = [["8","3",".",".","7",".",".",".","."],
           [".",".",".","4","1","9",".",".","5"],
           [".",".",".",".","8",".",".","7","9"]]
 
-start = time.time()
-print(isValidSudoku(board1))  # Output: True
-print(isValidSudoku(board2))  # Output: False
-end = time.time()
-print(end-start)
+
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 1000000
+
+for _ in range(num_simulations):
+    isValidSudoku(board1)
+    isValidSudoku(board2)
+
+# print(isValidSudoku(board1))  # Output: True
+# print(isValidSudoku(board2))  # Output: False

@@ -51,6 +51,22 @@ class Solution:
 
 # Test cases
 sol = Solution()
-print(sol.lengthOfLastWord("Hello World"))  # Output: 5
-print(sol.lengthOfLastWord("   fly me   to   the moon  "))  # Output: 4
-print(sol.lengthOfLastWord("luffy is still joyboy"))  # Output: 6
+
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    sol.lengthOfLastWord("Hello World")  # Output: 5
+    sol.lengthOfLastWord("   fly me   to   the moon  ")  # Output: 4
+    sol.lengthOfLastWord("luffy is still joyboy")  # Output: 6
+
+# print(sol.lengthOfLastWord("Hello World"))  # Output: 5
+# print(sol.lengthOfLastWord("   fly me   to   the moon  "))  # Output: 4
+# print(sol.lengthOfLastWord("luffy is still joyboy"))  # Output: 6

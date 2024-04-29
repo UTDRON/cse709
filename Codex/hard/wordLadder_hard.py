@@ -57,12 +57,33 @@ def ladderLength(beginWord: str, endWord: str, wordList: list[str]) -> int:
     return 0
 
 # Example usage:
-beginWord1 = "hit"
-endWord1 = "cog"
-wordList1 = ["hot","dot","dog","lot","log","cog"]
-print(ladderLength(beginWord1, endWord1, wordList1))  # Output: 5
+import sys
 
-beginWord2 = "hit"
-endWord2 = "cog"
-wordList2 = ["hot","dot","dog","lot","log"]
-print(ladderLength(beginWord2, endWord2, wordList2))  # Output: 0
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 1000000
+
+for _ in range(num_simulations):
+    beginWord1 = "hit"
+    endWord1 = "cog"
+    wordList1 = ["hot","dot","dog","lot","log","cog"]
+    ladderLength(beginWord1, endWord1, wordList1)  # Output: 5
+
+    beginWord2 = "hit"
+    endWord2 = "cog"
+    wordList2 = ["hot","dot","dog","lot","log"]
+    ladderLength(beginWord2, endWord2, wordList2)  # Output: 0
+
+# beginWord1 = "hit"
+# endWord1 = "cog"
+# wordList1 = ["hot","dot","dog","lot","log","cog"]
+# print(ladderLength(beginWord1, endWord1, wordList1))  # Output: 5
+
+# beginWord2 = "hit"
+# endWord2 = "cog"
+# wordList2 = ["hot","dot","dog","lot","log"]
+# print(ladderLength(beginWord2, endWord2, wordList2))  # Output: 0

@@ -51,14 +51,37 @@ def getPermutation(n, k):
     permutations.sort()
     return ''.join(permutations[k-1])
 
-n = 3
-k = 3
-print(getPermutation(n, k))  # Output: "213"
+import sys
 
-n = 4
-k = 9
-print(getPermutation(n, k))  # Output: "2314"
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 1000000
 
-n = 3
-k = 1
-print(getPermutation(n, k))  # Output: "123"
+for _ in range(num_simulations):
+    n = 3
+    k = 3
+    getPermutation(n, k)
+
+    n = 4
+    k = 9
+    getPermutation(n, k)
+
+    n = 3
+    k = 1
+    getPermutation(n, k)
+
+# n = 3
+# k = 3
+# print(getPermutation(n, k))  # Output: "213"
+
+# n = 4
+# k = 9
+# print(getPermutation(n, k))  # Output: "2314"
+
+# n = 3
+# k = 1
+# print(getPermutation(n, k))  # Output: "123"

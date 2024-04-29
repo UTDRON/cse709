@@ -59,6 +59,21 @@ def romanToInt(s: str) -> int:
     return total
 
 # Example usage:
-print(romanToInt("III"))      # Output: 3
-print(romanToInt("LVIII"))    # Output: 58
-print(romanToInt("MCMXCIV"))  # Output: 1994
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    romanToInt("III")      # Output: 3
+    romanToInt("LVIII")    # Output: 58
+    romanToInt("MCMXCIV")  # Output: 1994
+
+# print(romanToInt("III"))      # Output: 3
+# print(romanToInt("LVIII"))    # Output: 58
+# print(romanToInt("MCMXCIV"))  # Output: 1994

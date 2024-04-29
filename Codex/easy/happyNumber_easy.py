@@ -57,8 +57,19 @@ def isHappy(n: int) -> bool:
         return True
 
 # Test cases
-isHappy(19)  # Output: True
-isHappy(2)   # Output: False
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    isHappy(19)  # Output: True
+    isHappy(2)   # Output: False
 
 # print(isHappy(19))  # Output: True
 # print(isHappy(2))   # Output: False

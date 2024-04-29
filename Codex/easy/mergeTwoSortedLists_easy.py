@@ -76,20 +76,47 @@ def printLinkedList(head):
 
 sol = Solution()
 
-# Example1:
-list1 = createLinkedList([1, 2, 4])
-list2 = createLinkedList([1, 3, 4])
-merged_list = sol.mergeTwoLists(list1, list2)
-printLinkedList(merged_list)
+import sys
 
-# Example2:
-list1 = createLinkedList([])
-list2 = createLinkedList([])
-merged_list = sol.mergeTwoLists(list1, list2)
-printLinkedList(merged_list)
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
 
-# Example3:
-list1 = createLinkedList([])
-list2 = createLinkedList([0])
-merged_list = sol.mergeTwoLists(list1, list2)
-printLinkedList(merged_list)
+for _ in range(num_simulations):
+    # Example1:
+    list1 = createLinkedList([1, 2, 4])
+    list2 = createLinkedList([1, 3, 4])
+    merged_list = sol.mergeTwoLists(list1, list2)
+
+    # Example2:
+    list1 = createLinkedList([])
+    list2 = createLinkedList([])
+    merged_list = sol.mergeTwoLists(list1, list2)
+
+    # Example3:
+    list1 = createLinkedList([])
+    list2 = createLinkedList([0])
+    merged_list = sol.mergeTwoLists(list1, list2)
+
+
+# # Example1:
+# list1 = createLinkedList([1, 2, 4])
+# list2 = createLinkedList([1, 3, 4])
+# merged_list = sol.mergeTwoLists(list1, list2)
+# printLinkedList(merged_list)
+
+# # Example2:
+# list1 = createLinkedList([])
+# list2 = createLinkedList([])
+# merged_list = sol.mergeTwoLists(list1, list2)
+# printLinkedList(merged_list)
+
+# # Example3:
+# list1 = createLinkedList([])
+# list2 = createLinkedList([0])
+# merged_list = sol.mergeTwoLists(list1, list2)
+# printLinkedList(merged_list)

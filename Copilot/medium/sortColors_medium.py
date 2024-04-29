@@ -42,8 +42,25 @@ def sortColors(nums):
     return nums
 
 # Example usage:
-nums1 = [2, 0, 2, 1, 1, 0]
-print(sortColors(nums1))  # Output: [0, 0, 1, 1, 2, 2]
+import sys
 
-nums2 = [2, 0, 1]
-print(sortColors(nums2))  # Output: [0, 1, 2]
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 1000000
+
+for _ in range(num_simulations):
+    nums1 = [2, 0, 2, 1, 1, 0]
+    sortColors(nums1)  
+
+    nums2 = [2, 0, 1]
+    sortColors(nums2)  
+
+# nums1 = [2, 0, 2, 1, 1, 0]
+# print(sortColors(nums1))  # Output: [0, 0, 1, 1, 2, 2]
+
+# nums2 = [2, 0, 1]
+# print(sortColors(nums2))  # Output: [0, 1, 2]

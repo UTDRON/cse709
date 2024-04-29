@@ -42,5 +42,19 @@ def mySqrt(x: int) -> int:
     return right
 
 # Test cases
-print(mySqrt(4))  # Output: 2
-print(mySqrt(8))  # Output: 2
+import sys
+
+if len(sys.argv) < 2:
+    num_simulations = 1
+else:
+    if sys.argv[1] == "1":
+        num_simulations = 1
+    else:
+        num_simulations = 10000000
+
+for _ in range(num_simulations):
+    mySqrt(4)  # Output: 2
+    mySqrt(8)  # Output: 2
+
+# print(mySqrt(4))  # Output: 2
+# print(mySqrt(8))  # Output: 2
