@@ -65,7 +65,7 @@ else:
     if sys.argv[1] == "1":
         num_simulations = 1
     else:
-        num_simulations = 10000000
+        num_simulations = 1000000
 
 for _ in range(num_simulations):
     isHappy(19)  # Output: True

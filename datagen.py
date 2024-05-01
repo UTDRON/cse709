@@ -6,7 +6,7 @@ import pandas as pd
 # Define the root directory
 root_dir = os.getcwd()
 
-arguments = ["1"]
+arguments = ["2"]
 models                      = ['/Codex','/Copilot']
 difficulties                = ['/easy','/medium','/hard']
 directory                   = root_dir + "/Codex/easy/"
@@ -50,5 +50,5 @@ selected_df = emissions_df[selected_columns]
 selected_df['problems'] = problems
 selected_df['llm_used'] = llm_used
 selected_df['difficulty'] = diff
-selected_df.to_csv("selected_emissions.csv", index=False)
+selected_df.to_csv("million_emissions3.csv", index=False)
 

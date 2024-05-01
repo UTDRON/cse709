@@ -74,7 +74,7 @@ else:
     if sys.argv[1] == "1":
         num_simulations = 1
     else:
-        num_simulations = 1000000
+        num_simulations = 100000
 
 for _ in range(num_simulations):
     beginWord1 = "hit"
